@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pemesanan Barang</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: 'Poppins', Tahoma;
+        }
+    </style>
+</head>
+
+<body style="padding: 20px 90px 20px 90px; margin: auto;">
+    <nav>
+        <ul style="list-style: none; overflow: hidden; margin:0; padding: 0; border:1px solid black;">
+            <li style="float: left; padding: 10px 77px 10px 77px; border-right: 1px solid black;">
+                <a href="#">Home</a>
+            </li>
+            <li style="float: left; padding: 10px 77px 10px 77px; border-right: 1px solid black;">
+                <a href="#">Generate Link</a>
+            </li>
+            <li style="float: left; padding: 10px 77px 10px 77px; border-right: 1px solid black;">
+                <a href="#">Transaction History</a>
+            </li>
+            <li style="float: left; padding: 10px 77px 10px 77px; border-right: 1px solid black;">
+                <a href="#">Policy</a>
+            </li>
+            <li style="float: left; padding: 10px 77px 10px 77px;">
+                <a href="#">Logout</a>
+            </li>
+        </ul>
+    </nav>
+
+    <div style="clear: left;"></div>
+
+    <article style="margin-top: 20px;">
+        <section style="float: left; width: 22%;">
+            <img style="border: 1px solid black; margin-bottom: 10px;" src="img/upload.png" alt="Upload picture!">
+            <br>
+            <button>Upload Pictures</button>
+        </section>
+
+        <section style="float:left;  width: 78%;">
+
+            <form action="">
+                <div style="margin-bottom: 10px;">
+                    <label for="title" style="margin-right: 150px;">Title Here : </label>
+                    <input type="text" style="width: 65%;" name="title" id="title"> <br>
+                </div>
+
+                <div style="margin-bottom: 10px;">
+                    <label for="description" style="margin-right: 140px; vertical-align: top;">Description : </label>
+                    <textarea name="description" id="description" cols="83" rows="8"></textarea> <br>
+                </div>
+
+                <div style="margin-bottom: 10px;">
+                    <label for="accountnumber" style="margin-right: 101px;">Account Number : </label>
+                    <input type="text" style="width: 65%;" name="accountnumber" id="accountnumber"> <br>
+                </div>
+
+                <div style="margin-bottom: 10px;">
+                    <label for="bank" style="margin-right: 183px;">Bank : </label>
+                    <input type="text" style="width: 65%;" name="bank" id="bank"> <br>
+                </div>
+
+
+                <div style="margin-bottom: 10px;">
+                    <label for="title" style="margin-right: 112px;">Account Holder : </label>
+                    <input type="text" style="width: 65%;" name="title" id="title"> <br>
+                </div>
+
+                <div style="margin-bottom: 10px;">
+                    <label for="transaction" style="margin-right: 140px;">Transaction : </label>
+                    <select name="transaction" id="transaction">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                    </select> <br>
+                </div>
+
+                <p style="margin-left: 235px; margin-top: -5px;">
+                    * if the transaction is for 3 person, choose 3 from drop down list
+                </p>
+
+                <div style="margin-bottom: 15px;">
+                    <div style="margin-left: 235px;">
+                        <input type="checkbox" name="checkboxsendtomobilephone" id="checkboxsendtomobilephone">
+                        <label for="checkboxsendtomobilephone" style="margin-right: 150px;">Send to Mobile Phone</label>
+                        </input><br>
+                    </div>
+
+                    <div style="margin-left: 235px;">
+                        <input type="checkbox" name="checkboxsendtoemail" id="checkboxsendtoemail">
+                        <label for="checksendtoemail" style="margin-right: 140px;">Send to Email</label>
+                        </input><br>
+                    </div>
+                </div>
+
+                <div style="margin-bottom: 10px;">
+                    <label for="sendtomobilephone" style="margin-right: 64px;">Send to Mobile Phone : </label>
+                    <input type="text" style="width: 65%;" name="sendtomobilephone" id="sendtomobilephone"> <br>
+                </div>
+
+                <div style="margin-bottom: 10px;">
+                    <label for="sendtoemail" style="margin-right: 121px;">Send to Email : </label>
+                    <input type="text" style="width: 65%;" name="sendtoemail" id="sendtoemail"> <br>
+                </div>
+
+                <br>
+                <br>
+
+                <div style="margin-left: 235px;">
+                    <input
+                        style="padding: 2px; width: 150px; background-color: green; color: white; border: 1px solid black;"
+                        type="submit" value="Generate Nabr Link">
+                </div>
+            </form>
+        </section>
+
+        <div style="clear: both;"></div>
+    </article>
+</body>
+
+</html>
