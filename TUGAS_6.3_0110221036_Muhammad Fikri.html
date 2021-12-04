@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Praktikum 6.3</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        .header {
+            margin: 10px;
+            border-radius: 10%;
+            background: rgb(8, 70, 0);
+            padding: 20px;
+            text-align: center;
+        }
+
+        .content {
+            display: flex;
+            height: 50vh;
+            text-align: center;
+        }
+
+        .asside {
+            width: 30%;
+            border-radius: 10%;
+            margin: 10px;
+            background: orange;
+        }
+
+        .article {
+            width: 70%;
+            border-radius: 10%;
+            margin: 10px;
+            background: coral;
+        }
+
+        .content {
+            display: flex;
+        }
+
+        .content div {
+            margin: 8px;
+        }
+
+        div>img {
+            margin: auto;
+            object-fit: cover;
+            width: 80%;
+        }
+
+        .footer {
+            margin: 10px;
+            border-radius: 10%;
+            background: lightblue;
+            padding: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <h1>Header</h1>
+    </header>
+    <div class="content">
+        <asside class="asside">
+            <h1>Asside</h1>
+        </asside>
+        <article class="article">
+            <div>
+                <h1>Content</h1>
+            </div>
+            <div class="content">
+                <div>
+                    <img src="img/rab1.jpg" />
+                </div>
+                <div>
+                    <img src="img/rab1.jpg" />
+                </div>
+                <div>
+                    <img src="img/rab1.jpg" />
+                </div>
+            </div>
+        </article>
+    </div>
+    <footer class="footer">
+        <h1>Footer</h1>
+    </footer>
+</body>
+
+
+</html>

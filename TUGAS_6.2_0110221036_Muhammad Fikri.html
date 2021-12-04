@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pratikum 6.2</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+
+        .header {
+            width: 100%;
+            background: red;
+            padding: 30px;
+        }
+
+        .content {
+            display: flex;
+        }
+
+
+        .article {
+            flex-grow: 8;
+            background: green;
+            padding: 150px;
+        }
+
+        .asside {
+            flex-grow: 1;
+            background: blue;
+            padding: 150px;
+        }
+
+        .nav {
+            flex-grow: 1;
+            background: yellow;
+            padding: 150px;
+        }
+
+        .footer {
+            background: brown;
+            padding: 30px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <header class="header">Header</header>
+    <div class="content">
+        <article class="article">Article</article>
+        <asside class="asside">Asside</asside>
+        <nav class="nav">Navbar</nav>
+    </div>
+    <footer class="footer">Footer</footer>
+</body>
+
+</html>
