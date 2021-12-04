@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LATIHAN JS03</title>
+    <script>
+        const hello = (name) => {
+            let obj = document.getElementById('message')
+            obj.innerHTML = `Hello ${name}`
+            obj.style.background = 'lightgreen'
+
+            console.log('Hai ' + name)
+            return;
+        }
+    </script>
+</head>
+
+<body>
+    <button onclick="hello('Muhammad Fikri')">Hello</button>
+    <br>
+    <span id="message"></span>
+</body>
+
+</html>
