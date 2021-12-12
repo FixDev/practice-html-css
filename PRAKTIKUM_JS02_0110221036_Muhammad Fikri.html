@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PRAKTER JS03</title>
+    <script>
+        // Menggunakan arrow function
+        const convertKurs = () => {
+            const kursDollarToIdr = 14650
+            // Create obj DOM 
+            let obj = document.getElementById('hasil');
+
+            // Get nominal dari inputan
+            let nominalRp = parseFloat(document.getElementById("nominalRp").value);
+
+            // Check jika nominal NaN
+            if (isNaN(nominalRp)) {
+                alert('Isi terlebih dahulu field nominal')
+                obj.innerHTML = ''
+                return
+            }
+
+            // Check nominal jika kurang dari 0
+            if (nominalRp <= 0) {
+                alert('Nominal harus lebih dari 0')
+                obj.innerHTML = ''
+                return
+            }
+
+            // Perhitungan
+            const dollar = nominalRp / kursDollarToIdr
+            obj.innerHTML = `= ${dollar.toFixed(2)}`
+            return
+        }
+    </script>
+</head>
+
+<body>
+    <input type="number" id="nominalRp" placeholder="Masukan Nominal Rupiah"> <span id="hasil"></span>
+    <br>
+    <br>
+    <button onclick="convertKurs()">Hitung Kurs</button>
+</body>
+
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PRAKTER JS04</title>
+    <script>
+        // Menggunakan arrow function
+        const hitung = () => {
+            const bil1 = parseFloat(document.getElementById('bil1').value)
+            const bil2 = parseFloat(document.getElementById('bil2').value)
+            const operator = document.getElementById('operator').value
+
+            if (isNaN(bil1) || isNaN(bil2)) {
+                return
+            }
+
+            let hasil
+
+            switch (operator) {
+                case 'kurang':
+                    hasil = bil1 - bil2
+                    break;
+                case 'kali':
+                    hasil = bil1 * bil2
+                    break;
+                case 'bagi':
+                    hasil = bil1 / bil2
+                    break;
+
+                default:
+                    hasil = bil1 + bil2
+            }
+
+
+            document.getElementById('hasil').value = hasil
+            return
+        }
+    </script>
+</head>
+
+<body>
+    <div style="padding: 10px;">
+        <input type="number" id="bil1" placeholder="Masukan Bilangan Pertama" onchange="hitung()"
+            style="margin-bottom: 10px;"> <br>
+        <select name="operator" id="operator" style="margin-bottom: 10px;">
+            <option value="tambah">Tambah</option>
+            <option value="kurang">Kurang</option>
+            <option value="kali">Kali</option>
+            <option value="bagi">Bagi</option>
+        </select> <br>
+        <input type="number" id="bil2" placeholder="Masukan Bilangan Kedua" onchange="hitung()"> <br>
+        = <br>
+        <input type="number" id="hasil" disabled>
+    </div>
+</body>
+
+</html>
