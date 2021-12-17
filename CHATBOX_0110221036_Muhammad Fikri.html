@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat App</title>
+    <script>
+        const appendMessage = (event) => {
+            event.preventDefault()
+            const { msg_box } = document.form
+            let _msg_box = msg_box.value
+
+            const row = document.createElement("p")
+            const text_row = document.createTextNode(_msg_box)
+            row.appendChild(text_row)
+            document.getElementById('message').appendChild(row)
+
+            document.getElementById('msg_box').value = ''
+        }
+    </script>
+    <style>
+        * {
+            box-sizing: content-box;
+        }
+
+        .container {
+            width: 17%;
+            padding: 8px;
+            border: 1px solid black;
+        }
+
+        #message {
+            display: block;
+            line-height: 2px;
+            height: 28vh;
+            overflow: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div id="message"></div>
+        <form name="form" onsubmit="appendMessage(event)">
+            <input type="text" name="msg_box" id="msg_box">
+            <input type="submit" value="Kirim">
+        </form>
+    </div>
+</body>
+
+</html>

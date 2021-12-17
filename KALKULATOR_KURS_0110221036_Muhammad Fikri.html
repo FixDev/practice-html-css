@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator Kurs</title>
+    <script>
+        const perkalianKurs = (type_valas, nilai) => {
+            switch (type_valas) {
+                case 'SGD':
+                    return nilai * 13472;
+                    break;
+                case 'RM':
+                    return nilai * 874;
+                    break;
+                case 'YEN':
+                    return nilai * 120;
+                    break;
+                case 'ER':
+                    return nilai * 15888;
+                    break;
+                case 'RL':
+                    return nilai * 3592;
+                    break;
+
+                default:
+                    return nilai * 9915;
+                    break;
+            }
+            return
+        }
+
+        const hitungKurs = () => {
+            let { nilai_valas, type_valas } = document.form
+            const nilai = parseFloat(nilai_valas.value)
+            const typeValas = type_valas.value
+
+
+            if (nilai === '' || isNaN(nilai)) {
+                document.getElementById('nilai_rupiah').value = ''
+                return
+            }
+
+            const hasil = perkalianKurs(typeValas, nilai)
+
+            document.getElementById('nilai_rupiah').value = hasil
+
+            return
+        }
+    </script>
+</head>
+
+<body>
+    <form name="form" style="margin:2% 1% 0 1%;">
+        <fieldset style="background-color: lightblue;">
+            <legend>Kurs rupiah - Mata uang asing</legend>
+            <table border="1" width="100%">
+                <thead>
+                    <th>
+                        Masukan Nilai
+                    </th>
+                    <th>
+                        Valas
+                    </th>
+                    <th>
+                        Nilai Rupiah
+                    </th>
+                </thead>
+                <tbody align="center">
+                    <tr>
+                        <td>
+                            <input style="width: 98%;" type="number" name="nilai_valas" id="nilai_valas"
+                                onchange="hitungKurs()">
+                        </td>
+                        <td>
+                            <select name="valas" id="type_valas" style="width: 80%;" onchange="hitungKurs()">
+                                <option value="USD">Dollar US</option>
+                                <option value="SGD">Dollar Singapore</option>
+                                <option value="RM">Ringgit</option>
+                                <option value="YEN">Yen</option>
+                                <option value="ER">Euro</option>
+                                <option value="RL">Riyal</option>
+                            </select>
+                        </td>
+                        <td>
+                            <input style="width: 98%;" type="number" id="nilai_rupiah" disabled>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </fieldset>
+    </form>
+</body>
+
+</html>
